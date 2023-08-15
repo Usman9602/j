@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gothic Regular' !important;
+}
+@font-face {
+  font-family: Gothic Regular;
+  src: url('./Assets/Font/Montserrat-Light-Alt1-main/Montserrat-Light-Alt1.otf');
+}
+@font-face {
+  font-family: h1;
+  src: url('./Assets/Font/Montserrat-Light-Alt1-main/Montserrat-Light-Alt1.otf');
+}
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,208 @@
+#leftmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  height: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0em 0.25em 0.75em rgb(124 124 124 / 50%);
+  -moz-box-shadow: 0em 0.25em 0.75em rgba(124, 124, 124, 0.5);
+  box-shadow: 0em 0.25em 0.75em rgb(124 124 124 / 50%);
+  z-index: 99999999;
+}
+
+#leftmenu.hide {
+  left: -280px;
+}
+
+#leftmenu .content {
+  width: 100%;
+  height: 100%;
+}
+
+#leftmenu .content h3 {
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #a5a5a5;
+}
+
+#leftmenu .content .scroll_box {
+  width: 100%;
+  height: calc(100% - 60px);
+  padding-bottom: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#leftmenu .content h3 span {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+#leftmenu .content .item_cont {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#leftmenu .content a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  text-decoration: none;
+  z-index: 1;
+}
+
+#leftmenu .content .image_item {
+  width: 150px;
+  height: 150px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  flex-basis: 46%;
+  border: 3px solid salmon;
+}
+
+#leftmenu .content .image_item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  image-rendering: pixelated;
+}
+
+#leftmenu .content .image_item p {
+  background-color: #000;
+  color: #f5f5f5;
+}
+
+#leftmenu .content .coin_item {
+  width: 150px;
+  height: 150px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  flex-basis: 46%;
+  border: 3px solid salmon;
+  background-color: black;
+  overflow: hidden;
+}
+
+#leftmenu .content .coin_item p {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 2px;
+  color: white;
+  font-family: monospace;
+  overflow: hidden;
+
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+#leftmenu .content .html_item {
+  width: 150px;
+  height: 150px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  flex-basis: 46%;
+  border: 3px solid salmon;
+  background-color: black;
+  overflow: hidden;
+}
+
+#leftmenu .content .html_item iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+
+/* button styling --------------------------------- */
+#leftmenu .content #save_button {
+  border: 2px solid black;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.5s ease;
+  padding: 8px 14px 12px;
+  border-radius: 5px;
+  display: block;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+}
+
+#leftmenu .content #save_button:after {
+  content: '';
+  display: block;
+  height: 7px;
+  width: 100%;
+  background-image: repeating-linear-gradient(45deg,
+      #666,
+      #666 1px,
+      transparent 2px,
+      transparent 5px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-top: 1px solid #666;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-size: 7px 7px;
+}
+
+#leftmenu .content #save_button:hover {
+  background-color: black;
+  color: white;
+  border-color: #000;
+}
+
+#leftmenu .content #save_button:hover:after {
+  background-image: repeating-linear-gradient(45deg,
+      #fff,
+      #fff 1px,
+      transparent 2px,
+      transparent 5px);
+  border-top: 1px solid #000;
+  animation: stripe-slide 12s infinite linear forwards;
+}
+
+#leftmenu ::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#leftmenu ::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+#leftmenu ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #f90;
+  background-image: -webkit-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent);
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}

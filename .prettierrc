@@ -1,0 +1,7 @@
+{
+    "semi": true,
+    "singleQuote": true,
+    "quote-props": "as-needed",
+    "tabWidth": 2,
+    "useTabs": false
+  }

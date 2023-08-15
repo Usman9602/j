@@ -1,0 +1,72 @@
+#rightmenu {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: transparent;
+  z-index: 99999999;
+}
+
+#rightmenu .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#rightmenu .content .buttons {
+  display: flex;
+}
+
+/* button styling --------------------------------- */
+#rightmenu .content #back_button {
+  margin: 5px;
+  border: 2px solid black;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+  padding: 10px 16px 14px;
+  border-radius: 5px;
+  display: block;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+}
+
+#rightmenu .content #back_button:after {
+  content: "";
+  display: block;
+  height: 7px;
+  width: 100%;
+  background-image: repeating-linear-gradient(45deg,
+      #666,
+      #666 1px,
+      transparent 2px,
+      transparent 5px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-top: 1px solid #666;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-size: 7px 7px;
+}
+
+#rightmenu .content #back_button:hover {
+  background-color: black;
+  color: white;
+  border-color: #000;
+}
+
+#rightmenu .content #back_button:hover:after {
+  background-image: repeating-linear-gradient(45deg,
+      #fff,
+      #fff 1px,
+      transparent 2px,
+      transparent 5px);
+  border-top: 1px solid #000;
+  animation: stripe-slide 12s infinite linear forwards;
+}
